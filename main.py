@@ -1,6 +1,9 @@
-N = int(input())
-hours = (N // 3600) % 24
-minutes = (N % 3600) // 60
-seconds = N % 60
-result = f"{hours}:{minutes:02}:{seconds:02}"
-print(result)
+t = int(input())
+ruyxat = []
+mod = 10**9 + 7
+for _ in range(t):
+    n = int(input())
+    Sn = (n * n) % mod  
+    ruyxat.append(Sn)
+for son in ruyxat:
+    print(son)
