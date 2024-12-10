@@ -1,40 +1,13 @@
-N=int(input())
-a=len(str(N))
-for i in range(a-1,-1,-1):
-  b=(N//10**i)%10
-  if i%3==1:
-    c={
-      1: "o'n ",
-      2: "yigirma ",
-      3: "o'ttiz ",
-      4: "qirq ",
-      5: "ellik ",
-      6: "oltmish ",
-      7: "yetmish ",
-      8: "sakson ",
-      9: "to'qson ",
-      0: ""
-     }
-    print(c[b],end='')
-  else:
-    c={
-      1: "bir ",
-      2: "ikki ",
-      3: "uch ",
-      4: "to'rt ",
-      5: "besh ",
-      6: "olti ",
-      7: "yetti ",
-      8: "sakkiz ",
-      9: "to'qqiz ",
-      0: ""
-    }
-    print(c[b],end='')
-  if b!=0 and i%3==2:
-    print("yuz ",end='')
-  if i==9:
-    print("milliard ",end='')
-  if i==6:
-    print("million ",end='')
-  if i==3:
-    print("ming ",end='')
+a1, a2, a3 = map(int, input().split())
+a4, a5, a6 = map(int, input().split())
+a7, a8, a9 = map(int, input().split())
+b1 = abs(a1-6)+abs(a2-1)+abs(a3-8)+abs(a4-7)+abs(a5-5)+abs(a6-3)+abs(a7-2)+abs(a8-9)+abs(a9-4)
+b2 = abs(a1-6)+abs(a2-7)+abs(a3-2)+abs(a4-1)+abs(a5-5)+abs(a6-9)+abs(a7-8)+abs(a8-3)+abs(a9-4)
+b3 = abs(a1-2)+abs(a2-9)+abs(a3-4)+abs(a4-7)+abs(a5-5)+abs(a6-3)+abs(a7-6)+abs(a8-1)+abs(a9-8)
+b4 = abs(a1-2)+abs(a2-7)+abs(a3-6)+abs(a4-9)+abs(a5-5)+abs(a6-1)+abs(a7-4)+abs(a8-3)+abs(a9-8)
+b5 = abs(a1-4)+abs(a2-3)+abs(a3-8)+abs(a4-9)+abs(a5-5)+abs(a6-1)+abs(a7-2)+abs(a8-7)+abs(a9-6)
+b6 = abs(a1-4)+abs(a2-9)+abs(a3-2)+abs(a4-3)+abs(a5-5)+abs(a6-7)+abs(a7-8)+abs(a8-1)+abs(a9-6)
+b7 = abs(a1-8)+abs(a2-1)+abs(a3-6)+abs(a4-3)+abs(a5-5)+abs(a6-7)+abs(a7-4)+abs(a8-9)+abs(a9-2)
+b8 = abs(a1-8)+abs(a2-3)+abs(a3-4)+abs(a4-1)+abs(a5-5)+abs(a6-9)+abs(a7-6)+abs(a8-7)+abs(a9-2)
+minimum = min(b1, b2, b3, b4, b5, b6, b7, b8)
+print(minimum)
